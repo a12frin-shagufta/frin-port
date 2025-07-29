@@ -6,27 +6,42 @@ import { IoMdMail } from "react-icons/io";
 const Navbar = () => {
   return (
     <div className="w-full flex justify-center pt-6">
-      <div className="relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-lg">
+      <div className="relative w-full max-w-xl mx-auto rounded-2xl overflow-hidden shadow-md">
         {/* Background Glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_600px_at_50%_200px,#2d2d35,transparent)] z-0" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#2d2d35,transparent)] z-0" />
 
         {/* Navbar Content */}
         <nav className="relative z-10 flex justify-between items-center px-6 py-4 bg-[#2a2a30] rounded-2xl">
           {/* Left: Icons */}
           <div className="flex gap-5 text-2xl text-stone-300">
-            <a href="#home" className="hover:text-blue-500 transition-colors duration-200">
+            <a
+              href="#home"
+              className="hover:text-blue-500 transition-colors duration-200"
+            >
               <FaHome />
             </a>
-            <a href="#tools" className="hover:text-pink-500 transition-colors duration-200">
+            <a
+              href="#tools"
+              className="hover:text-pink-500 transition-colors duration-200"
+            >
               <FaTools />
             </a>
-            <a href="#projects" className="hover:text-gray-400 transition-colors duration-200">
+            <a
+              href="#projects"
+              className="hover:text-gray-400 transition-colors duration-200"
+            >
               <FaFolder />
             </a>
-            <a href="#testimonials" className="hover:text-purple-500 transition-colors duration-200">
+            <a
+              href="#testimonials"
+              className="hover:text-purple-500 transition-colors duration-200"
+            >
               <FcLike />
             </a>
-            <a href="#contact" className="hover:text-red-500 transition-colors duration-200">
+            <a
+              href="#contact"
+              className="hover:text-red-500 transition-colors duration-200"
+            >
               <IoMdMail />
             </a>
           </div>
@@ -39,6 +54,7 @@ const Navbar = () => {
             >
               Hire Me
             </a>
+            
           </div>
         </nav>
       </div>

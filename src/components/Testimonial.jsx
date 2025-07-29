@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
+
+  
   {
     name: "Afandal Clothing Brand",
     role: "Brand Owner",
@@ -20,51 +21,40 @@ const testimonials = [
 const TestimonialSlider = () => {
   const [current, setCurrent] = useState(0);
 
-  // Auto slide every 5 sec
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+      setCurrent((prev) => (prev + 1) % testimonials.length); 
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
+  const { name, role, text, image } = testimonials[current];
+
   return (
-    <section className="w-full flex justify-center pt-16 pb-20 px-4">
-      <div className="relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-xl">
+    <section className="w-full flex justify-center pt-12 pb-20">
+      <div className="relative w-full max-w-xl mx-auto rounded-2xl overflow-hidden shadow-md">
         {/* Background Glow */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_700px_at_50%_200px,#2d2d35,transparent)] z-0" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_500px_at_50%_200px,#2d2d35,transparent)] z-0" />
 
-        {/* Card */}
-        <div className="relative z-10 p-10 bg-[#2a2a30]/90 backdrop-blur-md rounded-3xl border border-white/5">
-          <h2 className="text-3xl font-bold text-center mb-10 bg-gradient-to-r from-[#e07a5f] to-[#f5b461] bg-clip-text text-transparent">
-            Testimonials
-          </h2>
+        {/* Content */}
+        <div className="relative z-10 p-8 bg-[#2a2a30] rounded-2xl">
+          <h2 className="text-xl font-semibold text-[#e07a5f] mb-6">Testimonials</h2>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.6 }}
-              className="flex flex-col sm:flex-row items-center gap-8 text-white"
-            >
-              {/* Testimonial Text */}
-              <div className="flex-1 bg-[#1e1e24]/80 p-6 rounded-2xl border border-white/10 shadow-md">
-                <h3 className="font-semibold text-lg mb-1">{testimonials[current].name}</h3>
-                <p className="text-sm text-stone-400 mb-3">{testimonials[current].role}</p>
-                <p className="text-sm italic leading-relaxed">“{testimonials[current].text}”</p>
-              </div>
+          <div className="flex flex-col sm:flex-row gap-6 items-center text-white">
+            {/* Text */}
+            <div className="flex-1 bg-[#1e1e24] p-4 rounded-xl border border-[#333] text-stone-300">
+              <h3 className="text-white font-semibold text-base mb-1">{name}</h3>
+              <p className="text-sm text-stone-400 mb-2">{role}</p>
+              <p className="text-sm italic">“{text}”</p>
+            </div>
 
-              {/* Image */}
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                src={testimonials[current].image}
-                alt={testimonials[current].name}
-                className="w-40 h-52 rounded-2xl object-cover border border-white/10 shadow-md"
-              />
-            </motion.div>
-          </AnimatePresence>
+            {/* Image */}
+            <img
+              src={image}
+              alt={name}
+              className="w-40 h-52 rounded-xl object-cover border border-stone-700"
+            />
+          </div>
         </div>
       </div>
     </section>
