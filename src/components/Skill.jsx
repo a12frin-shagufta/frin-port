@@ -10,7 +10,7 @@ const skills = [
   { icon: <SiExpress />, name: "Express", color: "text-gray-300" },
   { icon: <SiMongodb />, name: "MongoDB", color: "text-green-400" },
   { icon: <FaJsSquare />, name: "JavaScript", color: "text-yellow-300" },
-  { icon: <SiTypescript />, name: "TypeScript", color: "text-blue-500" },
+
   { icon: <SiTailwindcss />, name: "Tailwind CSS", color: "text-cyan-300" },
   { icon: <FaPython />, name: "Python", color: "text-yellow-400" },
   { icon: <FaGitAlt />, name: "Git", color: "text-orange-500" },

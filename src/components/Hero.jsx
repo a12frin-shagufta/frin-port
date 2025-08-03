@@ -78,24 +78,8 @@ const Hero = () => {
             >
               <FaXTwitter />
             </a>
-            <a 
-              href="https://github.com/a12frin-shagufta" 
-              aria-label="GitHub"
-              className="hover:text-white hover:-translate-y-1 transition-all duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub />
-            </a>
-            <a 
-              href="https://linkedin.com/in/yourprofile" 
-              aria-label="LinkedIn"
-              className="hover:text-white hover:-translate-y-1 transition-all duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin />
-            </a>
+          
+           
           </motion.div>
 
           {/* Bio - Properly centered text */}
