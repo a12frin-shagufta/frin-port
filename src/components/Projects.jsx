@@ -23,78 +23,88 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="w-full flex justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="relative w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-xl">
-        {/* Background Glow */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#3a3a42] via-transparent to-transparent opacity-60 z-0" />
-
-        {/* Content */}
-        <div className="relative z-10 p-6 sm:p-8 md:p-10 bg-[#2a2a30]/90 backdrop-blur-sm rounded-3xl">
-          <div className="mb-8 text-center sm:text-left">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#e07a5f] mb-2">Featured Projects</h2>
-            <p className="text-stone-400 max-w-2xl mx-auto sm:mx-0">
-              Here are some of my recent works showcasing my design and development skills
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {projects.map((project, index) => (
+    <section id="projects" className="w-full flex justify-center py-16 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#e07a5f] mb-3">Featured Projects</h2>
+          <p className="text-stone-400 max-w-2xl mx-auto text-lg">
+            Here are some of my recent works showcasing my design and development skills
+          </p>
+        </div>
+        
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <div 
+              key={index}
+              className="relative group transition-all duration-300 hover:-translate-y-2"
+            >
               <a
-                key={index}
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group relative bg-gradient-to-br ${project.color} p-5 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
+                className="block"
               >
-                {/* Thumbnail with overlay */}
-                <div className="relative h-40 rounded-lg overflow-hidden mb-4">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-all duration-500" />
-                </div>
+                {/* Project Card */}
+                <div className={`
+                  relative h-full bg-gradient-to-br ${project.color} 
+                  rounded-2xl overflow-hidden shadow-xl
+                  border border-[#3a3a42] hover:border-[#e07a5f]/30
+                  transition-all duration-500
+                `}>
+                  {/* Thumbnail */}
+                  <div className="relative h-60 sm:h-72 w-full overflow-hidden">
+                    <img
+                      src={project.thumbnail}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                  </div>
 
-                {/* Content */}
-                <div className="relative z-10">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-semibold text-white">{project.title}</h3>
-                    <FaExternalLinkAlt className="text-stone-400 group-hover:text-[#e07a5f] transition-colors" />
+                  {/* Content */}
+                  <div className="p-6 sm:p-8">
+                    <div className="flex justify-between items-start mb-3">
+                      <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                      <FaExternalLinkAlt className="text-stone-400 group-hover:text-[#e07a5f] transition-colors mt-1" />
+                    </div>
+                    
+                    <p className="text-stone-300 mb-4">{project.desc}</p>
+                    
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag, i) => (
+                        <span 
+                          key={i}
+                          className="text-xs px-3 py-1 bg-[#3a3a42]/70 text-stone-300 rounded-full backdrop-blur-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                   
-                  <p className="text-sm text-stone-300 mb-3">{project.desc}</p>
-                  
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    {project.tags.map((tag, i) => (
-                      <span 
-                        key={i}
-                        className="text-xs px-2 py-1 bg-[#3a3a42]/50 text-stone-300 rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  {/* Hover effect */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#e07a5f]/10 via-transparent to-transparent" />
                   </div>
                 </div>
-
-                {/* Hover effect */}
-                <div className="absolute inset-0 border border-transparent group-hover:border-[#e07a5f]/30 rounded-xl transition-all duration-300 pointer-events-none" />
               </a>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
 
-          {/* View More Button (optional) */}
-          <div className="text-center mt-10">
-            <a
-              href="#contact" // or link to full portfolio
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-[#e07a5f] to-[#d45a3a] text-white rounded-xl font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
-            >
-              Want a similar project?
-              <FiArrowRight className="ml-2" />
-            </a>
-          </div>
+        {/* CTA Button */}
+        <div className="text-center mt-14">
+          <a
+            href="#contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#e07a5f] to-[#d45a3a] hover:from-[#d45a3a] hover:to-[#e07a5f] text-white rounded-xl font-semibold hover:shadow-xl hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-[#e07a5f]/20"
+          >
+            Want a similar project for yourself?
+            <FiArrowRight className="ml-3 text-lg" />
+          </a>
         </div>
       </div>
     </section>
