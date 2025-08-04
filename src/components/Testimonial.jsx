@@ -6,13 +6,13 @@ const testimonials = [
     name: "Afandal Clothing Brand",
     role: "Brand Owner",
     text: "Working with her was an amazing experience! She understood my clothing brand's vision perfectly and brought it to life with a beautiful, modern website. She was patient, creative, and always willing to go the extra mile to make everything perfect.",
-    image: "./image/aaa.JPG",
+    image: "./image/ai3.png",
   },
   {
     name: "Irfan Siddique",
     role: "Video Editor",
     text: "Shagufta did a fantastic job bringing my website to life. The design is clean, responsive, and exactly what I needed. She was professional, communicative, and delivered everything on time.",
-    image: "https://media-del1-1.cdn.whatsapp.net/v/t61.24694-24/510135681_1394954105049725_4014972503922412318_n.jpg?ccb=11-4&oh=01_Q5Aa2AFx8FcF4zhZjnBa0v7iFUOChShcLAQH5YJ5VwewhnfI2A&oe=6895CA75&_nc_sid=5e03e0&_nc_cat=109",
+    image: "https://pbs.twimg.com/profile_images/1887402146737627136/2oOF8p4x_400x400.jpg",
   }
 ];
 
