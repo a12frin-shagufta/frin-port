@@ -1,5 +1,5 @@
-import React from "react";
-import { FiArrowRight } from "react-icons/fi";
+import React, { useState } from "react";
+import { FiArrowRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
@@ -18,10 +18,42 @@ const projects = [
     thumbnail: "/image/irfan.jpg",
     url: "https://www.irfansiddiqui.in/",
     tags: ["UI Design", "Responsive", "Portfolio"]
+  },
+  // Add more projects to demonstrate the functionality
+  {
+    title: "Project 3",
+    desc: "Another example project description",
+    color: "from-[#1d3b2a] to-[#122a1c]",
+    thumbnail: "/image/project3.jpg",
+    url: "#",
+    tags: ["Web App", "Firebase"]
+  },
+  {
+    title: "Project 4",
+    desc: "Additional project to showcase mobile behavior",
+    color: "from-[#2a1d3b] to-[#1c122a]",
+    thumbnail: "/image/project4.jpg",
+    url: "#",
+    tags: ["Mobile", "React Native"]
   }
 ];
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // For mobile sliding
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
+  };
+
+  // Choose which projects to display based on view
+  const displayedProjects = showAll ? projects : [projects[currentSlide]];
+
   return (
     <section id="projects" className="w-full flex justify-center py-16 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-6xl mx-auto">
@@ -33,9 +65,40 @@ const Projects = () => {
           </p>
         </div>
         
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+        {/* Mobile Controls - Slider Arrows */}
+        <div className="lg:hidden flex justify-center items-center mb-6 gap-4">
+          <button 
+            onClick={prevSlide}
+            className="p-2 rounded-full bg-[#3a3a42]/50 text-stone-300 hover:bg-[#e07a5f] hover:text-white transition-colors"
+            aria-label="Previous project"
+          >
+            <FiChevronLeft size={24} />
+          </button>
+          <span className="text-stone-300">
+            {currentSlide + 1} / {projects.length}
+          </span>
+          <button 
+            onClick={nextSlide}
+            className="p-2 rounded-full bg-[#3a3a42]/50 text-stone-300 hover:bg-[#e07a5f] hover:text-white transition-colors"
+            aria-label="Next project"
+          >
+            <FiChevronRight size={24} />
+          </button>
+        </div>
+
+        {/* Mobile Controls - Show More Toggle */}
+        <div className="lg:hidden flex justify-center mb-6">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-4 py-2 bg-[#3a3a42]/70 text-stone-300 rounded-full text-sm hover:bg-[#e07a5f] hover:text-white transition-colors"
+          >
+            {showAll ? "Show Less" : `Show All (${projects.length})`}
+          </button>
+        </div>
+        
+        {/* Projects Grid - Desktop (2 columns) / Mobile (slider or expanded) */}
+        <div className={`${showAll ? "grid grid-cols-1" : "lg:grid lg:grid-cols-2"} gap-8`}>
+          {(showAll ? projects : displayedProjects).map((project, index) => (
             <div 
               key={index}
               className="relative group transition-all duration-300 hover:-translate-y-2"
