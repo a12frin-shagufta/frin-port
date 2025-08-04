@@ -38,6 +38,10 @@ const Skills = () => {
           </motion.div>
 
           {/* Mobile: Horizontal scroll | Desktop: Grid */}
+<div className="text-center text-stone-500 text-xs mb-4 sm:hidden">
+  ← Swipe to see more →
+</div>
+          
           <div className="sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 overflow-x-auto sm:overflow-visible no-scrollbar flex sm:block">
             {skills.map((skill, index) => (
               <motion.div
@@ -52,6 +56,7 @@ const Skills = () => {
                   <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">
                     {skill.icon}
                   </div>
+                  
                 </div>
                 <span className="mt-3 text-sm text-stone-300 font-medium">{skill.name}</span>
               </motion.div>
