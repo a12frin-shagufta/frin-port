@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
 
 const Footer = () => {
@@ -22,23 +23,15 @@ const Footer = () => {
               className="flex gap-6 text-xl text-[#d27d5f]"
             >
               <a 
-                href="https://github.com/a12frin-shagufta" 
-                aria-label="GitHub"
+                href="https://www.instagram.com/frin.dev/" 
+                aria-label="Instagram"
                 className="hover:text-white hover:-translate-y-1 transition-all duration-300"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaGithub />
+               <FaInstagram />
               </a>
-              <a 
-                href="https://linkedin.com/in/yourprofile" 
-                aria-label="LinkedIn"
-                className="hover:text-white hover:-translate-y-1 transition-all duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin />
-              </a>
+             
               <a 
                 href="https://x.com/shagufta_dev" 
                 aria-label="Twitter"
@@ -46,10 +39,10 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FaTwitter />
+                <FaXTwitter />
               </a>
               <a 
-                href="mailto:your@email.com" 
+                href="mailto:shagufta7572@gmail.com" 
                 aria-label="Email"
                 className="hover:text-white hover:-translate-y-1 transition-all duration-300"
               >
