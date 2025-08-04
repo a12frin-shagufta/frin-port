@@ -10,7 +10,6 @@ const skills = [
   { icon: <SiExpress />, name: "Express", color: "text-gray-300" },
   { icon: <SiMongodb />, name: "MongoDB", color: "text-green-400" },
   { icon: <FaJsSquare />, name: "JavaScript", color: "text-yellow-300" },
-
   { icon: <SiTailwindcss />, name: "Tailwind CSS", color: "text-cyan-300" },
   { icon: <FaPython />, name: "Python", color: "text-yellow-400" },
   { icon: <FaGitAlt />, name: "Git", color: "text-orange-500" },
@@ -38,7 +37,8 @@ const Skills = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          {/* Mobile: Horizontal scroll | Desktop: Grid */}
+          <div className="sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 overflow-x-auto sm:overflow-visible no-scrollbar flex sm:block">
             {skills.map((skill, index) => (
               <motion.div
                 key={index}
@@ -46,7 +46,7 @@ const Skills = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="flex flex-col items-center"
+                className="flex-shrink-0 w-[45%] sm:w-auto flex flex-col items-center"
               >
                 <div className={`p-5 rounded-xl bg-[#3a3a42]/50 hover:bg-[#3a3a42] hover:shadow-lg transition-all duration-300 group ${skill.color}`}>
                   <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">
