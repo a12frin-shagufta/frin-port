@@ -21,20 +21,12 @@ const projects = [
   },
   // Add more projects to demonstrate the functionality
   {
-    title: "Project 3",
-    desc: "Another example project description",
+    title: "Under construction",
+    desc: "A perfume brand showcasing a modern design",
     color: "from-[#1d3b2a] to-[#122a1c]",
-    thumbnail: "/image/project3.jpg",
+    thumbnail: "https://i.pinimg.com/736x/cb/b5/f7/cbb5f72f8f67f113571b872e21d4cd9c.jpg",
     url: "#",
-    tags: ["Web App", "Firebase"]
-  },
-  {
-    title: "Project 4",
-    desc: "Additional project to showcase mobile behavior",
-    color: "from-[#2a1d3b] to-[#1c122a]",
-    thumbnail: "/image/project4.jpg",
-    url: "#",
-    tags: ["Mobile", "React Native"]
+    tags: ["React", "Node.js", "E-commerce"]
   }
 ];
 
@@ -52,7 +44,13 @@ const Projects = () => {
   };
 
   // Choose which projects to display based on view
-  const displayedProjects = showAll ? projects : [projects[currentSlide]];
+const isDesktop = window.innerWidth >= 1024;
+
+const displayedProjects = isDesktop
+  ? projects
+  : showAll
+    ? projects
+    : [projects[currentSlide]];
 
   return (
     <section id="projects" className="w-full flex justify-center py-16 px-4 sm:px-6 lg:px-8">
