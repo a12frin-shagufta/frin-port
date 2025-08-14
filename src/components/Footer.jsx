@@ -7,7 +7,7 @@ import { FiMail } from "react-icons/fi";
 const Footer = () => {
   return (
     <div className="w-full flex justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="relative w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-xl">
+      <div className="relative w-full max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-xl">
         {/* Background Glow - matches other components */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#3a3a42] via-transparent to-transparent opacity-60 z-0" />
         

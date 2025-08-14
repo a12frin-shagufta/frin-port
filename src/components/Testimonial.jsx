@@ -47,7 +47,7 @@ const TestimonialSlider = () => {
 
   return (
     <section id="testimonials" className="w-full py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#e07a5f] mb-3">Client Testimonials</h2>
           <p className="text-stone-400 max-w-2xl mx-auto text-lg">

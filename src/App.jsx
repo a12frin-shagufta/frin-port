@@ -6,8 +6,14 @@ import Projects from "./components/Projects";
 import Testimonial from "./components/Testimonial";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Services from "./components/Services";
+
+
 
 const App = () => {
+  // put this string at the top of both files
+const CONTAINER = "w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8";
+
   return (
     <div className="overflow-x-hidden text-stone-300 antialiased bg-[#1b1b1f] min-h-screen">
       {/* Background Glow */}
@@ -20,6 +26,10 @@ const App = () => {
         {/* Section Anchors */}
         <div id="home">
           <Hero />
+        </div>
+
+        <div id="service">
+          <Services/>
         </div>
 
         <div id="tools">
@@ -41,6 +51,9 @@ const App = () => {
          <div id="footer">
           <Footer/>
         </div>
+
+         
+        
       </div>
     </div>
   );

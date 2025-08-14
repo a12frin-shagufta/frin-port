@@ -12,7 +12,7 @@ const Hero = () => {
       </div>
 
       {/* Main Container */}
-      <div className="relative w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-xl">
+      <div className="relative w-full max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-xl">
         {/* Glow Effect */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#3a3a42] via-transparent to-transparent opacity-60 z-0" />
         

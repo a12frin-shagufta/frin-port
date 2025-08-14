@@ -1,23 +1,27 @@
 import React from "react";
 import { FaHome, FaFolder, FaTools, FaUserTie } from "react-icons/fa";
+import { FcServices } from "react-icons/fc";
 import { FcLike } from "react-icons/fc";
 import { IoMdMail } from "react-icons/io";
 import { motion } from "framer-motion";
 
+
 const Navbar = () => {
   const navItems = [
     { icon: <FaHome />, label: "Home", href: "#home", color: "text-blue-400" },
+     { icon: <FcServices />, label: "Services", href: "#service", color: "text-red-400" },
     { icon: <FaTools />, label: "Skills", href: "#skills", color: "text-pink-400" },
     { icon: <FaFolder />, label: "Projects", href: "#projects", color: "text-gray-300" },
     { icon: <FcLike />, label: "Testimonials", href: "#testimonials", color: "text-purple-400" },
-    { icon: <IoMdMail />, label: "Contact", href: "#contact", color: "text-red-400" }
+    { icon: <IoMdMail />, label: "Contact", href: "#contact", color: "text-red-400" },
+    
   ];
 
   return (
     <>
       {/* Desktop Navbar */}
       <div className="hidden sm:flex w-full justify-center pt-4 px-4 sticky top-0 z-50">
-        <div className="w-full max-w-6xl">
+        <div className="w-full max-w-3xl">
           <nav className="relative bg-[#2a2a30]/90 backdrop-blur-sm rounded-2xl shadow-lg border border-[#3a3a42] hover:border-[#e07a5f]/30 transition-all duration-300">
             <div className="flex justify-between items-center px-6 py-3">
               {/* Navigation Icons */}

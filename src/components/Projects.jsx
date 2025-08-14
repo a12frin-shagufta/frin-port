@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiArrowRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { FcServices } from "react-icons/fc";
 
 const projects = [
   {
@@ -21,11 +22,19 @@ const projects = [
   },
   // Add more projects to demonstrate the functionality
   {
-    title: "Under construction",
-    desc: "A perfume brand showcasing a modern design",
+    title: "Lustenshus-Handcrafted Rugs & Decor",
+    desc: "Modern Portfolio website",
     color: "from-[#1d3b2a] to-[#122a1c]",
-    thumbnail: "https://i.pinimg.com/736x/cb/b5/f7/cbb5f72f8f67f113571b872e21d4cd9c.jpg",
-    url: "#",
+    thumbnail: "./image/dev.png",
+    url: "https://www.lustenshus.in/",
+    tags: ["React", "Responsive", "Portfolio"]
+  },
+  {
+    title: "betteredballerina - Samantha A bellet dancer",
+    desc: "Portfolio Website - Wimiscal theme",
+    color: "from-[#BA487F] to-[#122a1c]",
+    thumbnail: "https://i.pinimg.com/736x/7f/ac/a0/7faca0395fe572518c47935b175f12aa.jpg",
+    url: "https://betteredballerina.vercel.app/",
     tags: ["React", "Node.js", "E-commerce"]
   }
 ];
@@ -54,7 +63,7 @@ const displayedProjects = isDesktop
 
   return (
     <section id="projects" className="w-full flex justify-center py-16 px-4 sm:px-6 lg:px-8">
-      <div className="w-full max-w-6xl mx-auto">
+      <div className="w-full max-w-3xl mx-auto">
         {/* Header */}
         <div className="mb-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#e07a5f] mb-3">Featured Projects</h2>
