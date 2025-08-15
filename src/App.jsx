@@ -17,9 +17,10 @@ const App = () => {
    <div className="overflow-x-hidden text-stone-300 antialiased bg-[#1b1b1f] min-h-screen">
       {/* Custom Cursor */}
     <CursorGlow 
-  size={150}         // Size of the glow in pixels
-  intensity={0.22}    // Opacity of the glow (0-1)
-  color="rgba(99,102,241,0.3)" // Glow colorcc
+ size={190}
+        intensity={0.26}
+        mobileMode="follow"   // 'follow' | 'ripple' | 'disabled'
+        mobileOffsetY={36} // Glow colorcc
 />
 
       {/* Page Content */}
