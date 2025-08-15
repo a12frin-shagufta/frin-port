@@ -16,11 +16,29 @@ const skills = [
 ];
 
 const Skills = () => {
+  const containerGlow = "#e07a5f"; // Matching the section title color
+  
   return (
+     <div className="select-none">
     <section id="skills" className="w-full flex justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="relative w-full max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-xl">
+      <motion.div 
+        className="relative w-full max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-xl group/skills"
+        whileHover={{ 
+          boxShadow: `0 0 30px 5px ${containerGlow}55`,
+          transition: { duration: 0.3 }
+        }}
+        style={{ "--container-glow": containerGlow }}
+      >
         {/* Background Glow */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#3a3a42] via-transparent to-transparent opacity-60 z-0" />
+
+        {/* Additional glow effect on hover */}
+        <div className="absolute inset-0 rounded-3xl opacity-0 group-hover/skills:opacity-100 transition-opacity duration-300 pointer-events-none"
+          style={{
+            boxShadow: `inset 0 0 20px 5px ${containerGlow}33`,
+            border: `1px solid ${containerGlow}33`
+          }}
+        />
 
         {/* Content */}
         <div className="relative z-10 p-6 sm:p-8 md:p-10 bg-[#2a2a30]/90 backdrop-blur-sm rounded-3xl">
@@ -31,7 +49,7 @@ const Skills = () => {
             viewport={{ once: true }}
             className="text-center mb-10"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#e07a5f] mb-2">My Tech Stack</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[var(--container-glow)] mb-2">My Tech Stack</h2>
             <p className="text-stone-400 max-w-2xl mx-auto">
               Technologies I use to build modern, fast, and beautiful web apps
             </p>
@@ -98,8 +116,9 @@ const Skills = () => {
             <p>Always learning and leveling up ⚡</p>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
+    </div>
   );
 };
 

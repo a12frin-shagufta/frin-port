@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const cursorGlow = ({ size = 200, intensity = 0.3, color = 'rgba(99,102,241,0.3)' }) => {
+const Cursor = ({ size = 200, intensity = 0.3, color = 'rgba(99,102,241,0.3)' }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -34,4 +34,4 @@ const cursorGlow = ({ size = 200, intensity = 0.3, color = 'rgba(99,102,241,0.3)
   return <div style={gradientStyle} />;
 };
 
-export default cursorGlow;
+export default Cursor;

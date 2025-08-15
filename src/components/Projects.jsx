@@ -67,6 +67,7 @@ const displayedProjects = isDesktop
     : [projects[currentSlide]];
 
   return (
+      <div className="select-none">
     <section id="projects" className="w-full flex justify-center py-16 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-3xl mx-auto">
         {/* Header */}
@@ -182,17 +183,34 @@ const displayedProjects = isDesktop
         </div>
 
         {/* CTA Button */}
-        <div className="text-center mt-14">
-          <a
-            href="#contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#e07a5f] to-[#d45a3a] hover:from-[#d45a3a] hover:to-[#e07a5f] text-white rounded-xl font-semibold hover:shadow-xl hover:scale-[1.02] transition-all duration-300 shadow-lg shadow-[#e07a5f]/20"
-          >
-            Want a similar project for yourself?
-            <FiArrowRight className="ml-3 text-lg" />
-          </a>
-        </div>
+        {/* CTA Button */}
+<div className="text-center mt-14">
+  <a
+    href="#contact"
+    className="relative inline-flex items-center px-8 py-4 rounded-xl font-semibold text-white
+               transition-all duration-300 hover:scale-[1.04]
+               bg-gradient-to-r from-[#e07a5f] to-[#d45a3a]
+               shadow-lg shadow-[#e07a5f]/30
+               hover:shadow-[0_0_40px_8px_#e07a5f]
+               hover:ring-2 hover:ring-[#e07a5f]"
+  >
+    {/* glow aura */}
+    <span
+      className="pointer-events-none absolute inset-0 rounded-xl opacity-0 hover:opacity-100 blur-2xl transition-opacity duration-300"
+      style={{
+        background: `radial-gradient(circle, rgba(224,122,95,0.6) 0%, rgba(212,90,58,0.4) 40%, transparent 70%)`
+      }}
+    />
+    <span className="relative flex items-center">
+      Want a similar project for yourself?
+      <FiArrowRight className="ml-3 text-lg" />
+    </span>
+  </a>
+</div>
+
       </div>
     </section>
+    </div>
   );
 };
 

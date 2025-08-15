@@ -2,11 +2,13 @@ import React from "react";
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import { div } from "framer-motion/client";
 
 const Hero = () => {
   const glowColor = "#d27d5f"; // your brand glow
 
   return (
+    <div className="select-none">
     <section
       id="home"
       className="relative w-full flex justify-center py-12 px-4 sm:px-6 lg:px-8 text-white"
@@ -18,42 +20,47 @@ const Hero = () => {
       </div>
 
       {/* Main Container */}
-      <div className="relative w-full max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-xl">
+      <motion.div 
+        className="relative w-full max-w-3xl mx-auto rounded-3xl overflow-hidden shadow-xl group/hero"
+        whileHover={{ 
+          boxShadow: `0 0 30px 5px ${glowColor}55`,
+          transition: { duration: 0.3 }
+        }}
+      >
         <div className="absolute inset-0 bg-gradient-to-b from-[#3a3a42] via-transparent to-transparent opacity-60 z-0" />
 
         <div className="relative z-10 p-6 sm:p-8 md:p-10 bg-[#2a2a30]/90 backdrop-blur-sm rounded-3xl text-center">
           {/* === Avatar with GLOW BORDER === */}
           <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6 }}
-  className="group relative w-32 h-32 mx-auto rounded-full overflow-hidden"
-  style={{ boxShadow: `0 0 15px 3px ${glowColor}` }} // always glowing
->
-  {/* Glow Aura */}
-  <span
-    className="pointer-events-none absolute -inset-2 rounded-full blur-2xl transition-opacity duration-300 opacity-40 group-hover:opacity-80"
-    style={{
-      background: `radial-gradient(circle, ${glowColor}55 0%, transparent 70%)`
-    }}
-  />
-  
-  {/* Border Glow */}
-  <div
-    className="absolute inset-0 rounded-full border-2 transition-colors duration-300"
-    style={{
-      borderColor: glowColor
-    }}
-  />
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="group relative w-32 h-32 mx-auto rounded-full overflow-hidden"
+          >
+            {/* Glow Aura */}
+            <span
+              className="pointer-events-none absolute -inset-2 rounded-full blur-2xl transition-opacity duration-300 opacity-40 group-hover:opacity-80 group-hover:scale-110"
+              style={{
+                background: `radial-gradient(circle, ${glowColor}55 0%, transparent 70%)`
+              }}
+            />
+            
+            {/* Border Glow */}
+            <div
+              className="absolute inset-0 rounded-full border-2 transition-all duration-300 group-hover:border-[3px]"
+              style={{
+                borderColor: glowColor,
+                boxShadow: `0 0 10px ${glowColor}`
+              }}
+            />
 
-  <img
-    src="/image/me.png"
-    alt="Shagufta Afrin"
-    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-    loading="eager"
-  />
-</motion.div>
-
+            <img
+              src="/image/me.png"
+              alt="Shagufta Afrin"
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+          </motion.div>
 
           {/* Handle */}
           <motion.p
@@ -142,7 +149,7 @@ const Hero = () => {
                 }}
               />
               <span className="relative">
-                Let’s Build Something Amazing
+                Let's Build Something Amazing
               </span>
               <svg className="w-4 h-4 ml-2 relative" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -150,8 +157,9 @@ const Hero = () => {
             </a>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
+    </div>
   );
 };
 

@@ -1,13 +1,14 @@
 import React from "react";
 import { FaHome, FaFolder, FaTools, FaUserTie } from "react-icons/fa";
-import { FcServices, FcLike } from "react-icons/fc";
+import { FcLike } from "react-icons/fc";
 import { IoMdMail } from "react-icons/io";
 import { motion } from "framer-motion";
+import { MdMiscellaneousServices } from "react-icons/md";
 
 const Navbar = () => {
   const navItems = [
     { icon: <FaHome />, label: "Home", href: "#home", glow: "#60a5fa" }, // blue-400
-    { icon: <FcServices />, label: "Services", href: "#service", glow: "#f87171" }, // red-400
+    { icon: <MdMiscellaneousServices />, label: "Services", href: "#service", glow: "#f87171" }, // red-400
     { icon: <FaTools />, label: "Skills", href: "#skills", glow: "#f472b6" }, // pink-400
     { icon: <FaFolder />, label: "Projects", href: "#projects", glow: "#d1d5db" }, // gray-300
     { icon: <FcLike />, label: "Testimonials", href: "#testimonials", glow: "#c084fc" }, // purple-400
@@ -15,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <>
+    <div className="select-none">
       {/* Desktop Navbar */}
       <div className="hidden sm:flex w-full justify-center pt-4 px-4 sticky top-0 z-50">
         <div className="w-full max-w-3xl">
@@ -43,10 +44,9 @@ const Navbar = () => {
                         background: `radial-gradient(circle, var(--glow) 0%, transparent 70%)`
                       }}
                     />
-                    {/* Icon */}
+                    {/* Icon - white by default, glow color on hover */}
                     <span
-                      className="text-2xl relative z-10 transition-transform duration-300 group-hover:scale-110"
-                      style={{ color: "var(--glow)" }}
+                      className="text-2xl text-white relative z-10 transition-all duration-300 group-hover:scale-110 group-hover:text-[var(--glow)]"
                     >
                       {item.icon}
                     </span>
@@ -91,10 +91,9 @@ const Navbar = () => {
                   background: `radial-gradient(circle, var(--glow) 0%, transparent 70%)`
                 }}
               />
-              {/* Icon */}
+              {/* Icon - white default, glow hover */}
               <span
-                className="text-xl relative z-10 transition-transform duration-300 group-hover:scale-110"
-                style={{ color: "var(--glow)" }}
+                className="text-xl text-white relative z-10 transition-all duration-300 group-hover:scale-110 group-hover:text-[var(--glow)]"
               >
                 {item.icon}
               </span>
@@ -103,7 +102,7 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

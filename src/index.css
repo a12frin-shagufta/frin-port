@@ -10,3 +10,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+
+/* put in your global CSS or Tailwind config */
+* {
+  user-select: none;
+}
