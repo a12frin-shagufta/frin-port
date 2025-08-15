@@ -8,6 +8,7 @@ const projects = [
     title: "Afandal - Clothing Brand",
     desc: "Modern e-commerce website built with React and Node.js featuring seamless shopping experience",
     color: "from-gray-900 to-gray-800",
+    glow: "#e07a5f",
     thumbnail: "/image/afandal.png",
     url: "https://afandal.com",
     tags: ["React", "Node.js", "E-commerce"]
@@ -16,15 +17,16 @@ const projects = [
     title: "Irfan Siddique – Video Editor",
     desc: "Portfolio website with dark theme UI design and custom animations",
     color: "from-[#3b1d2a] to-[#2a121c]",
+    glow: "#b04a67",
     thumbnail: "/image/irfan.jpg",
     url: "https://www.irfansiddiqui.in/",
     tags: ["UI Design", "Responsive", "Portfolio"]
   },
-  // Add more projects to demonstrate the functionality
   {
     title: "Lustenshus-Handcrafted Rugs & Decor",
     desc: "Modern Portfolio website",
     color: "from-[#1d3b2a] to-[#122a1c]",
+    glow: "#2bb57a",
     thumbnail: "./image/dev.png",
     url: "https://www.lustenshus.in/",
     tags: ["React", "Responsive", "Portfolio"]
@@ -33,11 +35,13 @@ const projects = [
     title: "betteredballerina - Samantha A bellet dancer",
     desc: "Portfolio Website - Wimiscal theme",
     color: "from-[#BA487F] to-[#122a1c]",
+    glow: "#ff6ea8",
     thumbnail: "https://i.pinimg.com/736x/7f/ac/a0/7faca0395fe572518c47935b175f12aa.jpg",
     url: "https://betteredballerina.vercel.app/",
     tags: ["React", "Node.js", "E-commerce"]
   }
 ];
+
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
@@ -106,63 +110,73 @@ const displayedProjects = isDesktop
         {/* Projects Grid - Desktop (2 columns) / Mobile (slider or expanded) */}
         <div className={`${showAll ? "grid grid-cols-1" : "lg:grid lg:grid-cols-2"} gap-8`}>
           {(showAll ? projects : displayedProjects).map((project, index) => (
-            <div 
-              key={index}
-              className="relative group transition-all duration-300 hover:-translate-y-2"
-            >
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-              >
-                {/* Project Card */}
-                <div className={`
-                  relative h-full bg-gradient-to-br ${project.color} 
-                  rounded-2xl overflow-hidden shadow-xl
-                  border border-[#3a3a42] hover:border-[#e07a5f]/30
-                  transition-all duration-500
-                `}>
-                  {/* Thumbnail */}
-                  <div className="relative h-60 sm:h-72 w-full overflow-hidden">
-                    <img
-                      src={project.thumbnail}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                  </div>
+           <div 
+  key={index}
+  className="relative group transition-all duration-300 hover:-translate-y-2"
+  style={{ "--glow": project.glow }}
+>
+  <a href={project.url} target="_blank" rel="noopener noreferrer" className="block">
+    <div
+      className={`
+        relative h-full bg-gradient-to-br ${project.color}
+        rounded-2xl overflow-hidden shadow-xl
+        border border-[#3a3a42] transition-all duration-500
+        group-hover:ring-2 group-hover:ring-[var(--glow)]
+        group-hover:shadow-[0_0_40px_6px_var(--glow)]
+      `}
+    >
+      {/* soft outer aura */}
+      <span
+        className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-300"
+        style={{
+          background:
+            "radial-gradient(120% 80% at 50% 0%, color-mix(in oklab, var(--glow) 60%, transparent) 0%, transparent 60%)"
+        }}
+      />
 
-                  {/* Content */}
-                  <div className="p-6 sm:p-8">
-                    <div className="flex justify-between items-start mb-3">
-                      <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                      <FaExternalLinkAlt className="text-stone-400 group-hover:text-[#e07a5f] transition-colors mt-1" />
-                    </div>
-                    
-                    <p className="text-stone-300 mb-4">{project.desc}</p>
-                    
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, i) => (
-                        <span 
-                          key={i}
-                          className="text-xs px-3 py-1 bg-[#3a3a42]/70 text-stone-300 rounded-full backdrop-blur-sm"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  {/* Hover effect */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#e07a5f]/10 via-transparent to-transparent" />
-                  </div>
-                </div>
-              </a>
-            </div>
+      {/* Thumbnail */}
+      <div className="relative h-60 sm:h-72 w-full overflow-hidden">
+        <img
+          src={project.thumbnail}
+          alt={project.title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+      </div>
+
+      {/* Content */}
+      <div className="p-6 sm:p-8">
+        <div className="flex justify-between items-start mb-3">
+          <h3 className="text-xl font-bold text-white">{project.title}</h3>
+          <FaExternalLinkAlt className="text-stone-400 group-hover:text-[var(--glow)] transition-colors mt-1" />
+        </div>
+        <p className="text-stone-300 mb-4">{project.desc}</p>
+
+        <div className="flex flex-wrap gap-2">
+          {project.tags.map((tag, i) => (
+            <span
+              key={i}
+              className="text-xs px-3 py-1 rounded-full backdrop-blur-sm"
+              style={{
+                background: "color-mix(in oklab, var(--glow) 18%, #3a3a42)",
+                color: "rgba(255,255,255,.9)"
+              }}
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* subtle top fade on hover */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 bg-gradient-to-t from-[color-mix(in_oklab,var(--glow)_20%,transparent)] via-transparent to-transparent" />
+      </div>
+    </div>
+  </a>
+</div>
+
           ))}
         </div>
 

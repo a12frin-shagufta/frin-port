@@ -4,15 +4,15 @@ import { SiMongodb, SiTailwindcss, SiExpress, SiTypescript, SiNextdotjs } from "
 import { motion } from "framer-motion";
 
 const skills = [
-  { icon: <FaReact />, name: "React", color: "text-cyan-400" },
-  { icon: <SiNextdotjs />, name: "Next.js", color: "text-white" },
-  { icon: <FaNodeJs />, name: "Node.js", color: "text-green-500" },
-  { icon: <SiExpress />, name: "Express", color: "text-gray-300" },
-  { icon: <SiMongodb />, name: "MongoDB", color: "text-green-400" },
-  { icon: <FaJsSquare />, name: "JavaScript", color: "text-yellow-300" },
-  { icon: <SiTailwindcss />, name: "Tailwind CSS", color: "text-cyan-300" },
-  { icon: <FaPython />, name: "Python", color: "text-yellow-400" },
-  { icon: <FaGitAlt />, name: "Git", color: "text-orange-500" },
+  { icon: <FaReact />,      name: "React",       glow: "#22d3ee" }, // cyan-400
+  { icon: <SiNextdotjs />,  name: "Next.js",     glow: "#ffffff" },
+  { icon: <FaNodeJs />,     name: "Node.js",     glow: "#22c55e" }, // green-500
+  { icon: <SiExpress />,    name: "Express",     glow: "#a3a3a3" }, // neutral-400
+  { icon: <SiMongodb />,    name: "MongoDB",     glow: "#34d399" }, // emerald-400
+  { icon: <FaJsSquare />,   name: "JavaScript",  glow: "#facc15" }, // yellow-400
+  { icon: <SiTailwindcss />,name: "Tailwind CSS",glow: "#38bdf8" }, // sky-400
+  { icon: <FaPython />,     name: "Python",      glow: "#ffd43b" },
+  { icon: <FaGitAlt />,     name: "Git",         glow: "#f97316" }, // orange-500
 ];
 
 const Skills = () => {
@@ -33,15 +33,16 @@ const Skills = () => {
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-[#e07a5f] mb-2">My Tech Stack</h2>
             <p className="text-stone-400 max-w-2xl mx-auto">
-              Technologies I'm proficient in and use regularly to build amazing web applications
+              Technologies I use to build modern, fast, and beautiful web apps
             </p>
           </motion.div>
 
-          {/* Mobile: Horizontal scroll | Desktop: Grid */}
-<div className="text-center text-stone-500 text-xs mb-4 sm:hidden">
-  ← Swipe to see more →
-</div>
-          
+          {/* Mobile hint */}
+          <div className="text-center text-stone-500 text-xs mb-4 sm:hidden">
+            ← Swipe to see more →
+          </div>
+
+          {/* Grid / Scroll */}
           <div className="sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 overflow-x-auto sm:overflow-visible no-scrollbar flex">
             {skills.map((skill, index) => (
               <motion.div
@@ -51,19 +52,42 @@ const Skills = () => {
                 transition={{ duration: 0.3, delay: index * 0.05 }}
                 viewport={{ once: true }}
                 className="flex-shrink-0 w-[45%] sm:w-auto flex flex-col items-center"
+                style={{ "--glow": skill.glow }}
               >
-                <div className={`p-5 rounded-xl bg-[#3a3a42]/50 hover:bg-[#3a3a42] hover:shadow-lg transition-all duration-300 group ${skill.color}`}>
-                  <div className="text-4xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                <div
+                  className="
+                    group relative p-5 rounded-xl bg-[#3a3a42]/50
+                    transition-all duration-300
+                    ring-1 ring-white/10
+                    hover:bg-[#3a3a42]
+                    hover:ring-[var(--glow)]
+                    hover:shadow-[0_0_38px_10px_var(--glow)]
+                    focus-within:ring-[var(--glow)]
+                    focus-within:shadow-[0_0_38px_10px_var(--glow)]
+                  "
+                >
+                  {/* aura behind content */}
+                  <span
+                    className="pointer-events-none absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-300"
+                    style={{
+                      background: "radial-gradient(80% 80% at 50% 40%, var(--glow) 0%, transparent 70%)"
+                    }}
+                  />
+                  {/* icon */}
+                  <div
+                    className="relative text-4xl mb-2 transition-transform duration-300 group-hover:scale-110"
+                    style={{ color: "var(--glow)" }}
+                    aria-hidden
+                  >
                     {skill.icon}
                   </div>
-                  
                 </div>
                 <span className="mt-3 text-sm text-stone-300 font-medium">{skill.name}</span>
               </motion.div>
             ))}
           </div>
 
-          {/* Additional Info */}
+          {/* Footer note */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -71,7 +95,7 @@ const Skills = () => {
             viewport={{ once: true }}
             className="mt-12 text-center text-stone-400 text-sm"
           >
-            <p>Always learning and expanding my skill set with new technologies</p>
+            <p>Always learning and leveling up ⚡</p>
           </motion.div>
         </div>
       </div>
