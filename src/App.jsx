@@ -7,7 +7,7 @@ import Testimonial from "./components/Testimonial";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Services from "./components/Services";
-import CursorGlow from "./components/cursorGlow";
+import CursorGlow from "./components/CursorGlow";
 
 const App = () => {
   const CONTAINER = "w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8";
