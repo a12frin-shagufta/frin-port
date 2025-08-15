@@ -56,7 +56,7 @@ const TestimonialSlider = () => {
         </div>
 
         <div className="relative">
-          {/* Slider Content */}
+          {/* Slider Contentefe */}
           <div className="relative overflow-hidden">
             <div className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${current * 100}%)` }}>
