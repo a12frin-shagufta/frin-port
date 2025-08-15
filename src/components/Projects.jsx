@@ -4,6 +4,7 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { FcServices } from "react-icons/fc";
 
 const projects = [
+  //projects
   {
     title: "Afandal - Clothing Brand",
     desc: "Modern e-commerce website built with React and Node.js featuring seamless shopping experience",
