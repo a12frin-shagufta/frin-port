@@ -19,8 +19,8 @@ const App = () => {
     <CursorGlow 
  size={190}
         intensity={0.26}
-        mobileMode="follow"   // 'follow' | 'ripple' | 'disabled'
-        mobileOffsetY={36} // Glow colorcc
+          // 'follow' | 'ripple' | 'disabled'
+        
 />
 
       {/* Page Content */}
