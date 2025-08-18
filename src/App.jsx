@@ -17,8 +17,8 @@ const App = () => {
    <div className="overflow-x-hidden text-stone-300 antialiased bg-[#1b1b1f] min-h-screen">
       {/* Custom Cursor */}
     <CursorGlow 
- size={190}
-        intensity={0.26}
+ size={120}
+        intensity={0.22}
           // 'follow' | 'ripple' | 'disabled'
         
 />
