@@ -18,11 +18,13 @@ const App = () => {
       {/* Custom Cursor */}
     <CursorGlow 
  size={120}
-        intensity={0.22}
+        intensity={0.33}
           // 'follow' | 'ripple' | 'disabled'
+           
+          // 
         
 />
-
+u
       {/* Page Content */}
       <div className="px-6 sm:px-10 max-w-6xl mx-auto">
         <Navbar />
