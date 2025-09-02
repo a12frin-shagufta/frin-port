@@ -14,6 +14,12 @@ const testimonials = [
     role: "Video Editor",
     text: "Shagufta did a fantastic job bringing my website to life. The design is clean, responsive, and exactly what I needed. Professional and communicative.",
     image: "https://pbs.twimg.com/profile_images/1887402146737627136/2oOF8p4x_400x400.jpg",
+  },
+  {
+    name: "Samantha Gonzalez",
+    role: "betteredballerina",
+    text: "Shagufta helped me build an absolutely amazing website page for my ballet content. I am very pleased with the page and with Shagufta's response time. The page is absolutely beautiful, functional and timeless. I couldn't be happier. Thank you!.",
+    image: "./image/baleet.jpg",
   }
 ];
 

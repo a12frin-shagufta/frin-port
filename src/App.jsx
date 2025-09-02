@@ -8,8 +8,10 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Services from "./components/Services";
 import CursorGlow from "./components/Cursor";
+import useGtagPageView from "./useGtagPageView";
 
 const App = () => {
+  useGtagPageView();
   const CONTAINER = "w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8";
 
   return (
@@ -19,7 +21,7 @@ const App = () => {
     <CursorGlow 
  size={120}
         intensity={0.33}
-          // 'follow' | 'ripple' | 'disabled'
+          // 'follow' | 'ripple' | 'disabled' 'disble
            
           // 
         
