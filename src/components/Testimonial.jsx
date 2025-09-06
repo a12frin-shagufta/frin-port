@@ -20,6 +20,12 @@ const testimonials = [
     role: "betteredballerina",
     text: "Shagufta helped me build an absolutely amazing website page for my ballet content. I am very pleased with the page and with Shagufta's response time. The page is absolutely beautiful, functional and timeless. I couldn't be happier. Thank you!.",
     image: "./image/baleet.jpg",
+  },
+   {
+    name: "Lustenshus Decor",
+    role: "Neeraj Bhatt - Business Owner",
+    text: "Shagufta helped me build an absolutely amazing website page for my ballet content. I am very pleased with the page and with Shagufta's response time. The page is absolutely beautiful, functional and timeless. I couldn't be happier. Thank you!.",
+    image: "./image/ls.png",
   }
 ];
 
