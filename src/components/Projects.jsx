@@ -6,23 +6,15 @@ import { FcServices } from "react-icons/fc";
 const projects = [
   //projects
   {
-    title: "Afandal - Clothing Brand",
+    title: "pleasant._.pearl",
     desc: "Modern e-commerce website built with React and Node.js featuring seamless shopping experience",
-    color: "from-gray-900 to-gray-800",
+    color: "from-red-800 to-yellow-800",
     glow: "#e07a5f",
-    thumbnail: "/image/afandal.png",
-    url: "https://afandal.com",
+    thumbnail: "/image/pearl.png",
+    url: "https://www.pleasantpearl.com",
     tags: ["React", "Node.js", "E-commerce"]
   },
-  {
-    title: "Irfan Siddique – Video Editor",
-    desc: "Portfolio website with dark theme UI design and custom animations",
-    color: "from-[#3b1d2a] to-[#2a121c]",
-    glow: "#b04a67",
-    thumbnail: "/image/irfan.jpg",
-    url: "https://www.irfansiddiqui.in/",
-    tags: ["UI Design", "Responsive", "Portfolio"]
-  },
+  
   {
     title: "Lustenshus-Handcrafted Rugs & Decor",
     desc: "Modern Portfolio website",
@@ -30,7 +22,7 @@ const projects = [
     glow: "#2bb57a",
     thumbnail: "./image/dev.png",
     url: "https://www.lustenshus.in/",
-    tags: ["React", "Responsive", "Portfolio"]
+    tags: ["React", "Responsive", "Business"]
   },
   {
     title: "betteredballerina - Samantha A bellet dancer",
@@ -39,7 +31,7 @@ const projects = [
     glow: "#ff6ea8",
     thumbnail: "https://i.pinimg.com/736x/7f/ac/a0/7faca0395fe572518c47935b175f12aa.jpg",
     url: "https://betteredballerina.vercel.app/",
-    tags: ["React", "Node.js", "E-commerce"]
+    tags: ["React", "Portfolio", "Ballet"]
   }
 ];
 

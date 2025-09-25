@@ -3,18 +3,8 @@ import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const testimonials = [
-  {
-    name: "Afandal Clothing Brand",
-    role: "Brand Owner",
-    text: "Working with her was an amazing experience! She understood my clothing brand's vision perfectly and brought it to life with a beautiful, modern website.",
-    image: "./image/ai3.png",
-  },
-  {
-    name: "Irfan Siddique",
-    role: "Video Editor",
-    text: "Shagufta did a fantastic job bringing my website to life. The design is clean, responsive, and exactly what I needed. Professional and communicative.",
-    image: "https://pbs.twimg.com/profile_images/1887402146737627136/2oOF8p4x_400x400.jpg",
-  },
+ 
+
   {
     name: "Samantha Gonzalez",
     role: "betteredballerina",
