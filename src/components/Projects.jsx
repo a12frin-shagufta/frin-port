@@ -6,22 +6,22 @@ import { FcServices } from "react-icons/fc";
 const projects = [
   //projects
   {
-    title: "pleasant._.pearl",
+    title: "theexplorers_store",
     desc: "Modern e-commerce website built with React and Node.js featuring seamless shopping experience",
     color: "from-red-800 to-yellow-800",
     glow: "#e07a5f",
-    thumbnail: "/image/pearl.png",
-    url: "https://www.pleasantpearl.com",
+    thumbnail: "/image/exp.png",
+    url: "https://www.theexplores.com/",
     tags: ["React", "Node.js", "E-commerce"]
   },
   
   {
-    title: "Lustenshus-Handcrafted Rugs & Decor",
+    title: "Mirror Production",
     desc: "Modern Portfolio website",
     color: "from-[#1d3b2a] to-[#122a1c]",
     glow: "#2bb57a",
-    thumbnail: "./image/dev.png",
-    url: "https://www.lustenshus.in/",
+    thumbnail: "./image/logo.jpg",
+    url: "https://www.mirrorholding.com/",
     tags: ["React", "Responsive", "Business"]
   },
   {
