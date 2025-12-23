@@ -11,10 +11,16 @@ const testimonials = [
     text: "Shagufta helped me build an absolutely amazing website page for my ballet content. I am very pleased with the page and with Shagufta's response time. The page is absolutely beautiful, functional and timeless. I couldn't be happier. Thank you!.",
     image: "./image/baleet.jpg",
   },
+  {
+    name: "theexplorers_store",
+    role: "Harshita - Founder",
+    text: "he was extremely cooperative, patient, and always responsive to my requests. I’m very satisfied with her work and truly appreciate her support throughout the entire process.",
+    image: "./image/exp.png",
+  },
    {
     name: "Lustenshus Decor",
     role: "Neeraj Bhatt - Business Owner",
-    text: "Shagufta helped me build an absolutely amazing website page for my ballet content. I am very pleased with the page and with Shagufta's response time. The page is absolutely beautiful, functional and timeless. I couldn't be happier. Thank you!.",
+    text: "Shagufta delivered a clean and professional business website for Lustenshus. She understood our requirements clearly, communicated well throughout the project, and delivered exactly what we needed. We are very satisfied with her work.",
     image: "./image/ls.png",
   }
 ];

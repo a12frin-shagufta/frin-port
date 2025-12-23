@@ -14,25 +14,39 @@ const projects = [
     url: "https://www.theexplores.com/",
     tags: ["React", "Node.js", "E-commerce"]
   },
+
+  {
+    title: "Ai powered 3d website",
+   desc: "A personal practice project created to explore 3D web experiences and animations using React and Three.js.",
+
+    color: "from-[#E9762B] to-[#696FC7]",
+    glow: "#ff6ea8",
+    thumbnail: "https://framerusercontent.com/images/pKvsoBw7PzMwvEKRY0A10BwE.png?width=800&height=1200",
+    url: "https://incomparable-meerkat-456748.netlify.app",
+    tags: ["React", "three js"]
+  },
   
   {
     title: "Mirror Production",
-    desc: "Modern Portfolio website",
+    desc: "A live, responsive business website with a modern and professional design.",
+
     color: "from-[#1d3b2a] to-[#122a1c]",
     glow: "#2bb57a",
     thumbnail: "./image/logo.jpg",
     url: "https://www.mirrorholding.com/",
     tags: ["React", "Responsive", "Business"]
   },
+  
   {
-    title: "betteredballerina - Samantha A bellet dancer",
-    desc: "Portfolio Website - Wimiscal theme",
-    color: "from-[#BA487F] to-[#122a1c]",
-    glow: "#ff6ea8",
-    thumbnail: "https://i.pinimg.com/736x/7f/ac/a0/7faca0395fe572518c47935b175f12aa.jpg",
-    url: "https://betteredballerina.vercel.app/",
-    tags: ["React", "Portfolio", "Ballet"]
-  }
+  title: "Inayaa – Fashion Store",
+  desc: "A modern fashion e-commerce website built using Shopify.",
+  color: "from-[#B77466] to-[#92487A]",
+  glow: "#ff6ea8",
+  thumbnail: "/image/ss.png",
+  url: "https://inayaa.myshopify.com",
+  tags: ["Shopify", "E-commerce", "UI/UX"]
+}
+
 ];
 
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { FaReact, FaNodeJs, FaPython, FaJsSquare, FaGitAlt } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss, SiExpress, SiTypescript, SiNextdotjs } from "react-icons/si";
+import  {FaShopify} from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const skills = [
@@ -13,6 +14,7 @@ const skills = [
   { icon: <SiTailwindcss />,name: "Tailwind CSS",glow: "#38bdf8" }, // sky-400
   { icon: <FaPython />,     name: "Python",      glow: "#ffd43b" },
   { icon: <FaGitAlt />,     name: "Git",         glow: "#f97316" }, // orange-500
+    { icon: <FaShopify />,     name: "Shopify",         glow: "#C5D89D" }, // orange-500
 ];
 
 const Skills = () => {

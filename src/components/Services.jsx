@@ -1,15 +1,60 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaShoppingCart, FaLaptopCode, FaUserTie, FaMobileAlt, FaBlog, FaPalette } from "react-icons/fa";
+import {
+  FaShoppingCart,
+  FaLaptopCode,
+  FaUserTie,
+  FaMobileAlt,
+  FaBlog,
+  FaPalette,
+  FaShopify
+} from "react-icons/fa";
 
 const services = [
-  { icon: <FaShoppingCart />, title: "E-Commerce Websites", description: "High-converting online stores with secure payments, product management, and smooth checkout experience." },
-  { icon: <FaLaptopCode />, title: "Business Websites", description: "Professional websites to showcase your company, services, and portfolio to attract more clients." },
-  { icon: <FaUserTie />, title: "Portfolio Websites", description: "Clean and modern portfolios for models, creators, and freelancers to showcase their work beautifully." },
-  { icon: <FaMobileAlt />, title: "Responsive Websites", description: "Fully mobile-friendly designs that work perfectly on phones, tablets, and desktops." },
-  { icon: <FaBlog />, title: "Blogs & Content Sites", description: "SEO-friendly blog platforms with easy content management for writers, influencers, and educators." },
-  { icon: <FaPalette />, title: "Custom UI/UX Designs", description: "Unique, brand-focused designs that match your style and engage your audience." }
+  {
+    icon: <FaShoppingCart />,
+    title: "E-Commerce Websites",
+    description:
+      "High-converting custom e-commerce stores with secure payments, product management, and smooth checkout experience."
+  },
+  {
+    icon: <FaShopify />,
+    title: "Shopify Stores",
+    description:
+      "Fully customized Shopify stores including theme setup, product upload, payment integration, and store optimization."
+  },
+  {
+    icon: <FaLaptopCode />,
+    title: "Business Websites",
+    description:
+      "Professional websites to showcase your company, services, and portfolio to attract more clients."
+  },
+  {
+    icon: <FaUserTie />,
+    title: "Portfolio Websites",
+    description:
+      "Clean and modern portfolios for models, creators, and freelancers to showcase their work beautifully."
+  },
+  {
+    icon: <FaMobileAlt />,
+    title: "Responsive Websites",
+    description:
+      "Fully mobile-friendly designs that work perfectly on phones, tablets, and desktops."
+  },
+  {
+    icon: <FaBlog />,
+    title: "Blogs & Content Sites",
+    description:
+      "SEO-friendly blog platforms with easy content management for writers, influencers, and educators."
+  },
+  // {
+  //   icon: <FaPalette />,
+  //   title: "Custom UI/UX Designs",
+  //   description:
+  //     "Unique, brand-focused designs that match your style and engage your audience."
+  // }
 ];
+
 
 const Services = () => {
   return (
