@@ -22,7 +22,7 @@ const projects = [
     color: "from-[#E9762B] to-[#696FC7]",
     glow: "#ff6ea8",
     thumbnail: "https://framerusercontent.com/images/pKvsoBw7PzMwvEKRY0A10BwE.png?width=800&height=1200",
-    url: "https://incomparable-meerkat-456748.netlify.app",
+    url: "https://3d-three-gray.vercel.app",
     tags: ["React", "three js"]
   },
   
@@ -43,7 +43,7 @@ const projects = [
   color: "from-[#B77466] to-[#92487A]",
   glow: "#ff6ea8",
   thumbnail: "/image/ss.png",
-  url: "https://inayaa.myshopify.com",
+  url: "https://girly-store-5129.myshopify.com",
   tags: ["Shopify", "E-commerce", "UI/UX"]
 }
 
