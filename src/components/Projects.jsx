@@ -33,7 +33,7 @@ const projects = [
     color: "from-[#1d3b2a] to-[#122a1c]",
     glow: "#2bb57a",
     thumbnail: "./image/logo.jpg",
-    url: "https://www.mirrorholding.com/",
+    url: "https://mirror-orcin.vercel.app",
     tags: ["React", "Responsive", "Business"]
   },
   
@@ -42,9 +42,6 @@ const projects = [
   desc: "A modern fashion e-commerce website built using Shopify.",
   color: "from-[#B77466] to-[#92487A]",
   glow: "#ff6ea8",
-  thumbnail: "/image/girl.png",
-  url: "https://girly-store-5129.myshopify.com",
-  tags: ["Shopify", "E-commerce", "UI/UX"]
 }
 
 ];
