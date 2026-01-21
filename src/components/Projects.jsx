@@ -42,7 +42,11 @@ const projects = [
   desc: "A modern fashion e-commerce website built using Shopify.",
   color: "from-[#B77466] to-[#92487A]",
   glow: "#ff6ea8",
+  thumbnail: "/image/girl.png",
+  url: "https://girly-store-5129.myshopify.com",
+  tags: ["Shopify", "E-commerce"]
 }
+
 
 ];
 
